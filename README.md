@@ -73,6 +73,34 @@ Use examples liberally, and show the expected output if you can. It's helpful to
 
 - [Jupyter Notebbok] MetaDetect3D on KITTI Dataset <a href= "https://github.com/JanMarcelKezmann/MetaDetect3D/blob/master/examples/MetaDetect3D_KITTI_Example.ipynb">here</a>
 
+## Available ML Models
+
+
+CLASSIFICATION_MODELS = ['logistic', 'ridge_cls', 'random_forest_cls', 'gb_cls', "mlp_cls"]
+REGRESSION_MODELS = ['ridge_reg', 'lasso_reg', 'random_forest_reg', 'gb_reg', "mlp_reg"]
+
+|         Model         |     Classifier     |     Regressors     |
+|-----------------------|--------------------|--------------------|
+|**Logistic**           | :heavy_check_mark: |                    |
+|**Ridge**              | :heavy_check_mark: | :heavy_check_mark: |
+|**Random Forest**      | :heavy_check_mark: | :heavy_check_mark: |
+|**Gradient Boosting**  | :heavy_check_mark: | :heavy_check_mark: |
+|**MLP**                | :heavy_check_mark: | :heavy_check_mark: |
+
+
+## Object Detectors
+
+ - PointPillars
+ - CenterPoint
+
+## Predefined Dataset Pipelines
+
+ - KITTI
+ - NuScenes
+ - (APTIV) custom dataset
+ 
+ This list should help you for adapting the code on custom datasets on your own.
+
 ## Citing
 
     @misc{Kezmann:2022,
