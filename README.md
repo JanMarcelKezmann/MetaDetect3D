@@ -9,6 +9,10 @@ MetaDetect3D is a post-processing tool for 3D object detection neural networks t
 <p>Meta models can have two purposes: The first is to evaluate the predictions by assigning them either a numerical value between 0 and 1 (Meta regression) or a binary label or probability (Meta classification). This functionality is crucial if one does not want to rely solely on the confidence score output by the object detector. If trained properly, this can lead to a better quality estimate of the predictions obtained from the object detector. Second, one can use the Meta detector to spot misplaced or missing labels, or stated differently, to detect label errors. This can be done by assuming that the Meta regressor assigns high values, or equivalently that the Meta classifier assigns a true label to boxes where it assumes the prediction is correct, even though the ground truth does not contain the label. This would yield potentially missing labels. Similarly, the Meta models should assign low values (or a false label) to a prediction where no box is assumed even though a box was predicted. In this case, if the prediction overlaps with a ground truth box, the label may be incorrect.</p>
 <p>The graph below displays the workflow of MetaDetect3D in detail.</p>
 
+<p align="center">
+ <img src="https://github.com/JanMarcelKezmann/MetaDetect3D/blob/main/images/MetaDetect3D%20Pipeline.png" width="717" height="679">
+</p>
+
 <p>In words the steps of the MetaDetect3D methods are:<p>
 
 1) Train a object detector on training set (and validate it on validation set)
